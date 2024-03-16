@@ -56,12 +56,12 @@ let slot3Div = document.querySelector("#slot-3")
 
 spinButton.addEventListener("click", function () {
     //if all match up you win
-    let slot1 = ride4SlotMachine(3)
+    let slot1 = ride4SlotMachine(Math.floor(Math.random(1) * 7) + 1);
     slot1Div.textContent = slot1
-    let slot2 = ride4SlotMachine(3)
-    slot2Div.textContent = slot1
-    let slot3 = ride4SlotMachine(3)
-    slot3Div.textContent = slot1
+    let slot2 = ride4SlotMachine(Math.floor(Math.random(1) * 7) + 1);
+    slot2Div.textContent = slot2
+    let slot3 = ride4SlotMachine(Math.floor(Math.random(1) * 7) + 1);
+    slot3Div.textContent = slot3
     let didTheyWin = (slot1 === slot2) && (slot2 === slot3)
 
     if (ride4PowerOn && didTheyWin) {
